@@ -10,10 +10,16 @@ def fetch_data():
         dog_data = data["data"]
         dog_details = f"Name : {dog_data["name"]} \nBread for : {dog_data["bred_for"]} \nBreed Group : {dog_data["breed_group"]} \nLife Span : {dog_data["life_span"]} \nTemperament{dog_data["temperament"]}"
 
-        print(f"- > Dog Details < - ")
+        print(f"- > Dog Details < - \n{dog_details}")
 
     else:
         print("Request could not complete")
 
+def main():
 
+    fetch_data()
+
+
+if __name__ == "__main__":
+    main()
 
