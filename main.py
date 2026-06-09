@@ -6,4 +6,14 @@ def fetch_data():
     response = requests.get(url)
     data = response.json()
 
-    
+    if data["statusCode"] == 200 and data["success"]:
+        dog_data = data["data"]
+        dog_details = f"Name : {dog_data["name"]} \nBread for : {dog_data["bred_for"]} \nBreed Group : {dog_data["breed_group"]} \nLife Span : {dog_data["life_span"]} \nTemperament{dog_data["temperament"]}"
+
+        print(f"- > Dog Details < - ")
+
+    else:
+        print("Request could not complete")
+
+
+
