@@ -17,8 +17,10 @@ def fetch_data():
 
 def main():
 
-    fetch_data()
-
+    try:    
+        fetch_data()
+    except Exception as e:
+        print(f"Error occured : {e}")
 
 if __name__ == "__main__":
     main()
